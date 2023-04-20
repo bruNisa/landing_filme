@@ -1,0 +1,48 @@
+@use 'variaveis';
+
+.hero {
+    
+    &__content {
+        background-color: rgba(0, 0, 0, 0.297);
+        max-width: 700px;
+        position: relative;
+        padding-top: 50px;
+        padding-left: 35px;
+
+        &__sobre {
+            display: flex;
+            height: 50vh;
+            top: 170%;
+            transform: translateY(20%);
+            
+            .text--big {
+                width: 500px;
+                padding-right: 50px;
+            }
+        }
+
+        .title {
+            margin-bottom: 30px;
+        }
+    }
+
+    &__trailer{
+        display: none;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) { // tablet
+    .hero__content__sobre {
+        height: 30vh;
+    }
+
+    .hero__trailer{
+        display: block;
+        margin-top: 20px;
+        padding-left: 35px;
+
+        .title{
+            margin-bottom: 15px;
+        }
+    }
+}

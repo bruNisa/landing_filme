@@ -1,0 +1,37 @@
+.elenco {
+    background-color: rgba(0, 0, 0, 0.297);
+    max-width: 700px;
+    position: relative;
+    padding-top: 50px;
+    padding-left: 35px;
+
+    &__content {
+        margin-top: 30px;
+        display: flex;
+        flex-wrap: wrap;
+        width: 600px;
+        list-style: none;
+        
+        &__ator {
+            display: block;
+            width: 300px;
+            height: 95px;
+
+            img {
+                max-width: 80px;
+                
+            }
+
+            .text{
+                padding-left: 20px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px) { // smartphone
+    .elenco__content{
+        display: block;
+    }
+
+}

@@ -1,0 +1,21 @@
+.fotos {
+    background-color: rgba(0, 0, 0, 0.297);
+    max-width: 700px;
+    position: relative;
+    padding-left: 35px;
+    padding-top: 50px;
+
+    &__content{
+        display: flex;
+        flex-wrap: wrap;
+
+        &__foto{
+            margin-right: 15px;
+            margin-top: 15px;
+
+            img{
+                border-radius: 10px;
+            }
+        }
+    }
+}

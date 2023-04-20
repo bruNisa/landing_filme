@@ -1,0 +1,105 @@
+@use 'variaveis';
+@use 'hero';
+@use 'elenco';
+@use 'noticias';
+@use 'fotos';
+
+@font-face {
+    font-family: Avenir;
+    src: url(../../assets/fonts/Avenir-Regular.woff2);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: Avenir;
+    src: url(../../assets/fonts/Avenir-Bold.woff2);
+    font-weight: 700;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: boder-box;
+}
+
+body{
+    background-color: variaveis.$corDeFundo;
+    font-family: Avenir, sans-serif;
+}
+
+.cabecalho{
+    width: 98.7vw;
+    height: 50vh;
+    background-image: url(../../dist/images/capa.jpg);
+    background-size: cover;
+    position: sticky;
+    top: 0;
+    left: 0;
+
+    .trailer{
+        margin-left: 54vw;
+        margin-top: 50vh;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) { // tablet
+    .cabecalho{
+        width: 100vw;
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 40vh;
+    }
+    
+    .trailer{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 767px) { // smartphone
+    .cabecalho{
+        width: 100vw;
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 20vh;
+    }
+    
+    .trailer{
+        display: none;
+    }
+}
+
+@mixin text($fontSize: 16px){
+    font-size: $fontSize;
+    line-height: $fontSize + 10;
+    color: variaveis.$corTextoPrincipal;
+}
+
+@mixin title($fontSize: 40px){
+    @include text($fontSize);
+    color: variaveis.$corTextoSecundario;
+}
+
+.text--big{
+    @include text(18px);
+}
+
+.text{
+    @include text;
+}
+
+.text--small{
+    @include text(12px);
+}
+
+.title--big{
+    @include title(44px);
+}
+
+.title{
+    @include title;
+}
+
+.title--small{
+    @include title(28px);
+}
+
